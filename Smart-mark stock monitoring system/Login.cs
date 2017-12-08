@@ -17,13 +17,13 @@ namespace Smart_mark_stock_monitoring_system
             InitializeComponent();
         }
 
-
+        //new froms
         home homeS = new home();
         manager managerS = new manager();
 
+        
         string stUserName = "lisa";
         string stPassWord = "password";
-
         string Musern = "david";
         string Mpassw = "password1";
 
@@ -61,6 +61,11 @@ namespace Smart_mark_stock_monitoring_system
             txtPassWord.Clear(); 
             txtPassWord.PasswordChar='*'; //when user starts typing the password is hidden.
 
+        }
+
+        private void txtPassWord_TextChanged(object sender, EventArgs e)
+        {
+            txtPassWord.PasswordChar = '*';
         }
     }
 }

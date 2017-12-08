@@ -51,6 +51,7 @@
             this.txtPassWord.TabIndex = 1;
             this.txtPassWord.Text = "password";
             this.txtPassWord.Click += new System.EventHandler(this.txtPassWord_Click);
+            this.txtPassWord.TextChanged += new System.EventHandler(this.txtPassWord_TextChanged);
             // 
             // btnLogin
             // 

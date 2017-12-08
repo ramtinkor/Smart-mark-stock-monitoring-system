@@ -23,5 +23,12 @@ namespace Smart_mark_stock_monitoring_system
             search.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Order OrderS = new Order();
+            OrderS.Show();
+            this.Close();
+        }
     }
 }
