@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Smart_mark_stock_monitoring_system
 {
-    public partial class Stock_Control : Form
+    public partial class Report : Form
     {
-        public Stock_Control()
+        public Report()
         {
             InitializeComponent();
         }
 
-        private void Stock_Control_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Report_Load(object sender, EventArgs e)
         {
 
         }

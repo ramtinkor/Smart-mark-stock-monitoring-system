@@ -27,10 +27,15 @@ namespace Smart_mark_stock_monitoring_system
         private void splashScreen_Tick(object sender, EventArgs e)
         {
 
-            timerSplahScreen += 1; 
+            timerSplahScreen += 1;
 
             if (timerSplahScreen == 350) { loginS.Show();this.Hide(); } //once the timer gets to a time, exit the loading screen
 
+
+        }
+
+        private void Loading_screen_Load(object sender, EventArgs e)
+        {
 
         }
     }
