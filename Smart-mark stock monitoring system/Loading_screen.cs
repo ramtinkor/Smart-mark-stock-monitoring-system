@@ -29,7 +29,7 @@ namespace Smart_mark_stock_monitoring_system
 
             timerSplahScreen += 1;
 
-            if (timerSplahScreen == 350) { loginS.Show();this.Hide(); } //once the timer gets to a time, exit the loading screen
+            if (timerSplahScreen == 950) { loginS.Show();this.Hide(); } //once the timer gets to a time, exit the loading screen
 
 
         }

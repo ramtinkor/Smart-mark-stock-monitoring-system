@@ -112,6 +112,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
@@ -131,6 +132,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cokeCola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Coca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\3-2-pepsi-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pepsi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\milk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\SmartWater.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\animal-graphics-sharks-328150.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Dodges_ferry_fc_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\e50a3c3669e8d991a94413eac8f3d7fb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\wait.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\loader-larger.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\source.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\45961-One-Punch-Man-Short-Animation-By-Astralnovas-By-Astralnovas-....gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\37bd91c3f1a9a29725507938ac3b3b94.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ajax-loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\200.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\loading_small.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
