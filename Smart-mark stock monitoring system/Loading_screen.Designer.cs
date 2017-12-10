@@ -40,7 +40,8 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 95);
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(81, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.TabIndex = 0;
@@ -58,7 +59,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Image = global::Smart_mark_stock_monitoring_system.Properties.Resources.loading_small;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 30);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(191, 214);
             this.pictureBox1.TabIndex = 1;
@@ -79,11 +80,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(250, 414);
+            this.ClientSize = new System.Drawing.Size(234, 420);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.MinimumSize = new System.Drawing.Size(250, 366);
+            this.MaximumSize = new System.Drawing.Size(250, 459);
+            this.MinimumSize = new System.Drawing.Size(250, 459);
             this.Name = "Loading_screen";
             this.Text = "Smart-Mart";
             this.Load += new System.EventHandler(this.Loading_screen_Load);

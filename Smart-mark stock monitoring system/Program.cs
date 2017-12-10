@@ -16,7 +16,7 @@ namespace Smart_mark_stock_monitoring_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loading_screen());
+            Application.Run(new Stock_Control());
         }
     }
 }
