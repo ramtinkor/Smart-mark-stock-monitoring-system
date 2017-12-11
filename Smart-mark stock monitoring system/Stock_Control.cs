@@ -14,14 +14,24 @@ namespace Smart_mark_stock_monitoring_system
     {
         public Stock_Control()
         {
+            
+
             InitializeComponent();
+
+            
+
+
+
         }
+
 
         decimal coke = 1.00m;
         decimal pepsi = 1.00m;
         decimal nutella = 1.49m;
         decimal apple = 0.49m;
         decimal bottled_water = 0.29m;
+        
+        
 
         int cokeQ = 6;
         int pepsiQ = 99;
@@ -29,6 +39,9 @@ namespace Smart_mark_stock_monitoring_system
         int appleQ = 29;
         int waterQ = 10;
         bool show = false;
+
+       
+
 
 
         public void hide()
@@ -334,6 +347,7 @@ namespace Smart_mark_stock_monitoring_system
             }
 
             else {
+                coke = 1.00m;
                 show = false;
                 hide();
                 pbItem1.BackgroundImage = Properties.Resources.Coca;
@@ -342,6 +356,133 @@ namespace Smart_mark_stock_monitoring_system
                 lbl1q.Text = Convert.ToString(cokeQ);
             }
 
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (checkStock.stock == 2)
+            {
+                comboBox1.Hide();
+                lblcokeS.Show();
+                lblpepsiS.Show();
+                lblnutellaS.Show();
+                lblappleS.Show();
+                lblwaterS.Show();
+
+            }
+
+
+            int cokeStock = (Convert.ToInt16(lbl1q.Text)); //convert current textbox to integer so i can evaluate it
+
+            if (cokeStock <= 10) //if stock level below or = 10
+            {
+                lblcokeS.Text = "Low in Stock";
+            }
+            else if (checkStock.cokeReordered == true) { //part of a class which checks if an item has been reorder or not/ 
+
+                lblcokeS.Text = "Reordered";
+            }
+
+            else{
+
+                lblcokeS.Text = "N/a"; //either stock is low or reordered if not there is nothing to report. 
+            }
+
+
+
+            if (checkStock.stock == 3) {
+
+                comboBox1.Hide();
+                button1.Show(); button2.Show(); button3.Show(); button4.Show(); button5.Show(); button5.Show();
+                button9.Show(); button10.Show(); button11.Show(); button12.Show(); button13.Show(); button14.Show();
+                
+                btnCokeOrder.Show();
+                btnNutellaOrder.Show();
+                btnNutellaPlus.Show();
+                btnNutellaSub.Show();
+
+
+            }
+
+            if (checkStock.stock == 4) {
+
+                comboBox1.Hide();
+                button1.Show();  button5.Show(); 
+                button11.Show(); button14.Show();
+                
+                btnNutellaSub.Show();
+
+                btnSold1.Show(); btnSold2.Show(); btnSold3.Show(); btnSold4.Show(); btnSold5.Show();
+
+
+
+
+            }
+
+
+
+        }
+
+        int ordersPlus = 10;
+        int ordersMinuns = 0;
+
+        private void btnNutellaPlus_Click(object sender, EventArgs e)
+        {
+           
+            ordersPlus = Convert.ToInt16(lbl3c.Text);
+            ordersPlus += 1;
+           
+            lbl3c.Text = Convert.ToString(ordersPlus);
+            
+        }
+        int currentStock = 12;
+
+
+
+
+        private void btnNutellaSub_Click(object sender, EventArgs e)
+        {
+            if (checkStock.stock == 4)
+            {
+                ordersMinuns = Convert.ToInt16(lbl3c.Text);
+                ordersMinuns -= 1;
+                lbl3c.Text = Convert.ToString(ordersMinuns);
+                if (ordersMinuns <= 0)
+                {
+
+                    MessageBox.Show("you cannot have sold more than we have in stock.", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+
+            }
+
+
+            else
+            {
+                ordersMinuns = Convert.ToInt16(lbl3c.Text);
+                ordersMinuns -= 1;
+
+                if (ordersMinuns < currentStock)
+                {
+
+                    MessageBox.Show("you cannot go below current stock", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                else
+                {
+                    lbl3c.Text = Convert.ToString(ordersMinuns);
+                }
+            }
+
+
+        }
+
+        private void btnSold3_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("confirm sold:", "okay", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }
