@@ -34,6 +34,8 @@ namespace Smart_mark_stock_monitoring_system
 
         }
 
+        //deisgn finsihed
+
         private void Loading_screen_Load(object sender, EventArgs e)
         {
          
