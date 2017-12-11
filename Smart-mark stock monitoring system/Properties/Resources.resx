@@ -121,8 +121,8 @@
   <data name="200" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\200.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="e50a3c3669e8d991a94413eac8f3d7fb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\e50a3c3669e8d991a94413eac8f3d7fb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wait" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\wait.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="source" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\source.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,28 +148,31 @@
   <data name="37bd91c3f1a9a29725507938ac3b3b94" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\37bd91c3f1a9a29725507938ac3b3b94.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SmartWater" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\SmartWater.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="apple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\apple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ajax-loading1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\ajax-loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="loading_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\loading_small.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pepsi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\pepsi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ajax-loading1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\ajax-loading.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="e50a3c3669e8d991a94413eac8f3d7fb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\e50a3c3669e8d991a94413eac8f3d7fb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="3-2-pepsi-transparent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\3-2-pepsi-transparent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wait" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\wait.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SmartWater" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\SmartWater.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="loader-larger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\loader-larger.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="loading_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\loading_small.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="14173-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\14173-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

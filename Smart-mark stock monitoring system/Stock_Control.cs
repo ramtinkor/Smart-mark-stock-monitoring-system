@@ -18,7 +18,7 @@ namespace Smart_mark_stock_monitoring_system
         }
 
         decimal coke = 1.00m;
-        decimal pepsi = 0.99m;
+        decimal pepsi = 1.00m;
         decimal nutella = 1.49m;
         decimal apple = 0.49m;
         decimal bottled_water = 0.29m;
@@ -28,8 +28,35 @@ namespace Smart_mark_stock_monitoring_system
         int nutellaQ = 12;
         int appleQ = 29;
         int waterQ = 10;
+        bool show = false;
 
 
+        public void hide()
+        { 
+
+            if (show == true)
+            {
+                //when the user seaches they only want to be able to see the item they searched for this will hide them all. 
+                pbItem2.Hide(); pbItem3.Hide(); pbItem4.Hide(); pbItem5.Hide();
+                lblItem2P.Hide(); lblItem3P.Hide(); lblItem4P.Hide(); lblItem5P.Hide();
+                lblName2.Hide(); lblName3.Hide(); lblName4.Hide(); lblName5.Hide();
+                lblp1.Hide(); lblp2.Hide(); lblp3.Hide(); lblp4.Hide();
+                lblq1.Hide(); lblq2.Hide(); lblq3.Hide(); lblq4.Hide();
+                lbl2c.Hide(); lbl3c.Hide(); lbl4c.Hide(); lbl5c.Hide();
+
+            }
+
+            else if(show==false) {
+
+                pbItem2.Show(); pbItem3.Show(); pbItem4.Show(); pbItem5.Show();
+                lblItem2P.Show(); lblItem3P.Show(); lblItem4P.Show(); lblItem5P.Show();
+                lblName2.Show(); lblName3.Show(); lblName4.Show(); lblName5.Show();
+                lblp1.Show(); lblp2.Show(); lblp3.Show(); lblp4.Show();
+                lblq1.Show(); lblq2.Show(); lblq3.Show(); lblq4.Show();
+                lbl2c.Show(); lbl3c.Show(); lbl4c.Show(); lbl5c.Show();
+            }
+
+        }
 
         private void Stock_Control_Load(object sender, EventArgs e)
         {
@@ -37,6 +64,8 @@ namespace Smart_mark_stock_monitoring_system
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -68,11 +97,15 @@ namespace Smart_mark_stock_monitoring_system
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            show = false;
+            hide();
+
             if (comboBox1.Text == "price")
 
             {
+
                 coke = 1.00m;
-                pepsi = 0.99m;
+                pepsi = 1.00m;
                 nutella = 1.49m;
                 apple = 0.49m;
                 bottled_water = 0.29m;
@@ -100,7 +133,7 @@ namespace Smart_mark_stock_monitoring_system
 
                 }
 
-                else if (price[0] == pepsi) { pbItem1.BackgroundImage = Properties.Resources.pepsi; lblItem1P.Text = Convert.ToString(pepsi); pepsi = 0; lblName1.Text = "Pepsi"; lblItem1P.Text = Convert.ToString(pepsiQ); }
+                else if (price[0] == pepsi) { pbItem1.BackgroundImage = Properties.Resources.pepsi; lblItem1P.Text = Convert.ToString(pepsi); pepsi = 0; lblName1.Text = "Pepsi"; lbl1q.Text = Convert.ToString(pepsiQ); }
 
                 else if (price[0] == nutella) { pbItem1.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem1P.Text = Convert.ToString(nutella); nutella = 0; lblName1.Text = "Nutella"; lbl1q.Text = Convert.ToString(nutellaQ); }
 
@@ -123,44 +156,34 @@ namespace Smart_mark_stock_monitoring_system
                 else if (price[0] == bottled_water) { pbItem2.BackgroundImage = Properties.Resources.SmartWater; lblItem2P.Text = Convert.ToString(bottled_water); bottled_water = 0; lblName2.Text = "Bottled water"; lbl2c.Text = Convert.ToString(waterQ);
                 }
 
-                //lblq
-                lbl2c.Text = Convert.ToString(cokeQ);
-                lbl2c.Text = Convert.ToString(pepsiQ);
-                lbl2c.Text = Convert.ToString(nutellaQ);
-                lbl2c.Text = Convert.ToString(appleQ);
-                lbl2c.Text = Convert.ToString(waterQ);
-                //
+
+                price.RemoveAt(0);
+
+                if (price[0] == coke) { pbItem3.BackgroundImage = Properties.Resources.Coca; lblItem3P.Text = Convert.ToString(coke); coke = 0; lblName3.Text = "Coke"; lbl3c.Text = Convert.ToString(cokeQ);}
+                else if (price[0] == pepsi) { pbItem3.BackgroundImage = Properties.Resources.pepsi; lblItem3P.Text = Convert.ToString(pepsi); pepsi = 0; lblName3.Text = "Pepsi"; lbl3c.Text = Convert.ToString(pepsiQ);}
+                else if (price[0] == nutella) { pbItem3.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem3P.Text = Convert.ToString(nutella); nutella = 0; lblName3.Text = "Nutella"; lbl3c.Text = Convert.ToString(nutellaQ);}
+                else if (price[0] == apple) { pbItem3.BackgroundImage = Properties.Resources.apple; lblItem3P.Text = Convert.ToString(apple); apple = 0; lblName3.Text = "Apples"; lbl3c.Text = Convert.ToString(appleQ);}
+                else if (price[0] == bottled_water) { pbItem3.BackgroundImage = Properties.Resources.SmartWater; lblItem3P.Text = Convert.ToString(bottled_water); bottled_water = 0; lblName3.Text = "Bottled water"; lbl3c.Text = Convert.ToString(waterQ);}
+
+                price.RemoveAt(0);
+
+                if (price[0] == coke) { pbItem4.BackgroundImage = Properties.Resources.Coca; lblItem4P.Text = Convert.ToString(coke); coke = 0; lblName4.Text = "Coke"; lbl4c.Text = Convert.ToString(cokeQ);}
+                else if (price[0] == pepsi) { pbItem4.BackgroundImage = Properties.Resources.pepsi; lblItem4P.Text = Convert.ToString(pepsi); pepsi = 0; lblName4.Text = "Pepsi"; lbl4c.Text = Convert.ToString(pepsiQ);}
+                else if (price[0] == nutella) { pbItem4.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem4P.Text = Convert.ToString(nutella); nutella = 0; lblName4.Text = "Nutella"; lbl4c.Text = Convert.ToString(nutellaQ);}
+                else if (price[0] == apple) { pbItem4.BackgroundImage = Properties.Resources.apple; lblItem4P.Text = Convert.ToString(apple); apple = 0; lblName4.Text = "Apples"; lbl4c.Text = Convert.ToString(appleQ);}
+                else if (price[0] == bottled_water) { pbItem4.BackgroundImage = Properties.Resources.SmartWater; lblItem4P.Text = Convert.ToString(bottled_water); bottled_water = 0; lblName4.Text = "Bottled water"; lbl4c.Text = Convert.ToString(waterQ);}
 
 
                 price.RemoveAt(0);
 
-                if (price[0] == coke) { pbItem3.BackgroundImage = Properties.Resources.Coca; lblItem3P.Text = Convert.ToString(coke); coke = 0; lblName3.Text = "Coke"; }
-                else if (price[0] == pepsi) { pbItem3.BackgroundImage = Properties.Resources.pepsi; lblItem3P.Text = Convert.ToString(pepsi); pepsi = 0; lblName3.Text = "Pepsi"; }
-                else if (price[0] == nutella) { pbItem3.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem3P.Text = Convert.ToString(nutella); nutella = 0; lblName3.Text = "Nutella"; }
-                else if (price[0] == apple) { pbItem3.BackgroundImage = Properties.Resources.apple; lblItem3P.Text = Convert.ToString(apple); apple = 0; lblName3.Text = "Apples"; }
-                else if (price[0] == bottled_water) { pbItem3.BackgroundImage = Properties.Resources.SmartWater; lblItem3P.Text = Convert.ToString(bottled_water); bottled_water = 0; lblName3.Text = "Bottled water"; }
-
-                price.RemoveAt(0);
-
-                if (price[0] == coke) { pbItem4.BackgroundImage = Properties.Resources.Coca; lblItem4P.Text = Convert.ToString(coke); coke = 0; lblName4.Text = "Coke"; }
-                else if (price[0] == pepsi) { pbItem4.BackgroundImage = Properties.Resources.pepsi; lblItem4P.Text = Convert.ToString(pepsi); pepsi = 0; lblName4.Text = "Pepsi"; }
-                else if (price[0] == nutella) { pbItem4.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem4P.Text = Convert.ToString(nutella); nutella = 0; lblName4.Text = "Nutella"; }
-                else if (price[0] == apple) { pbItem4.BackgroundImage = Properties.Resources.apple; lblItem4P.Text = Convert.ToString(apple); apple = 0; lblName4.Text = "Apples"; }
-                else if (price[0] == bottled_water) { pbItem4.BackgroundImage = Properties.Resources.SmartWater; lblItem4P.Text = Convert.ToString(bottled_water); bottled_water = 0; lblName4.Text = "Bottled water"; }
-
-
-                price.RemoveAt(0);
-
-                if (price[0] == coke) { pbItem5.BackgroundImage = Properties.Resources.Coca; lblItem5P.Text = Convert.ToString(coke); coke = 0; lblName5.Text = "Coke"; }
-                else if (price[0] == pepsi) { pbItem5.BackgroundImage = Properties.Resources.pepsi; lblItem5P.Text = Convert.ToString(pepsi); pepsi = 0; lblName5.Text = "Pepsi"; }
-                else if (price[0] == nutella) { pbItem5.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem5P.Text = Convert.ToString(nutella); nutella = 0; lblName5.Text = "Nutella"; }
-                else if (price[0] == apple) { pbItem5.BackgroundImage = Properties.Resources.apple; lblItem5P.Text = Convert.ToString(apple); apple = 0; lblName5.Text = "Apples"; }
-                else if (price[0] == bottled_water) { pbItem5.BackgroundImage = Properties.Resources.SmartWater; lblItem5P.Text = Convert.ToString(bottled_water); bottled_water = 0; lblName5.Text = "Bottled water"; }
-
-
+                if (price[0] == coke) { pbItem5.BackgroundImage = Properties.Resources.Coca; lblItem5P.Text = Convert.ToString(coke); coke = 0; lblName5.Text = "Coke"; lbl5c.Text = Convert.ToString(cokeQ);}
+                else if (price[0] == pepsi) { pbItem5.BackgroundImage = Properties.Resources.pepsi; lblItem5P.Text = Convert.ToString(pepsi); pepsi = 0; lblName5.Text = "Pepsi"; lbl5c.Text = Convert.ToString(pepsiQ);}
+                else if (price[0] == nutella) { pbItem5.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem5P.Text = Convert.ToString(nutella); nutella = 0; lblName5.Text = "Nutella"; lbl5c.Text = Convert.ToString(nutellaQ);}
+                else if (price[0] == apple) { pbItem5.BackgroundImage = Properties.Resources.apple; lblItem5P.Text = Convert.ToString(apple); apple = 0; lblName5.Text = "Apples"; lbl5c.Text = Convert.ToString(appleQ);}
+                else if (price[0] == bottled_water) { pbItem5.BackgroundImage = Properties.Resources.SmartWater; lblItem5P.Text = Convert.ToString(bottled_water); bottled_water = 0; lblName5.Text = "Bottled water"; lbl5c.Text = Convert.ToString(waterQ);}
 
                 coke = 1.00m;
-                pepsi = 0.99m;
+                pepsi = 1.00m;
                 nutella = 1.49m;
                 apple = 0.49m;
                 bottled_water = 0.29m;
@@ -262,19 +285,63 @@ namespace Smart_mark_stock_monitoring_system
 
 
         }
+        
+       
 
-        private void txtsearch_Click(object sender, EventArgs e)
+        private void txtsearch_TextChanged(object sender, EventArgs e)
         {
-            txtsearch.Clear();
-        }
+            string search = txtsearch.Text;
 
-        private void label16_Click(object sender, EventArgs e)
-        {
+            if (search == "pepsi")
+            {
+                pbItem1.BackgroundImage = Properties.Resources.pepsi; lblItem1P.Text = Convert.ToString(pepsi); lblName1.Text = "Pepsi"; lbl1q.Text = Convert.ToString(pepsiQ);
+                show = true;
+                hide();
+            }
 
-        }
+            else if (search == "coke")
+            {
+                pbItem1.BackgroundImage = Properties.Resources.Coca;
+                lblItem1P.Text = Convert.ToString(coke);
+                lblName1.Text = "Coke";
+                lbl1q.Text = Convert.ToString(cokeQ);
+                show = true;
+                hide();
+            }
 
-        private void lblcq_Click(object sender, EventArgs e)
-        {
+            else if (search == "water" | search == "bottle water")
+            {
+                pbItem1.BackgroundImage = Properties.Resources.SmartWater; lblItem1P.Text = Convert.ToString(bottled_water); lblName1.Text = "Bottled water"; lbl1q.Text = Convert.ToString(waterQ);
+                show = true;
+                hide();
+            }
+
+
+            else if (search == "nutella")
+            {
+
+                pbItem1.BackgroundImage = Properties.Resources.e50a3c3669e8d991a94413eac8f3d7fb; lblItem1P.Text = Convert.ToString(nutella); nutella = 0; lblName1.Text = "Nutella"; lbl1q.Text = Convert.ToString(nutellaQ);
+                show = true;
+                hide();
+            }
+
+            else if (search == "apples")
+            {
+
+                pbItem1.BackgroundImage = Properties.Resources.apple; lblItem1P.Text = Convert.ToString(apple); apple = 0; lblName1.Text = "Apples"; lbl1q.Text = Convert.ToString(appleQ);
+                show = true;
+                hide();
+            }
+
+            else {
+                show = false;
+                hide();
+                pbItem1.BackgroundImage = Properties.Resources.Coca;
+                lblItem1P.Text = Convert.ToString(coke);
+                lblName1.Text = "Coke";
+                lbl1q.Text = Convert.ToString(cokeQ);
+            }
+
 
         }
     }

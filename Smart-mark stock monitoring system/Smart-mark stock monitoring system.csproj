@@ -187,5 +187,8 @@
   <ItemGroup>
     <None Include="bin\Debug\loading_small.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\14173-200.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
